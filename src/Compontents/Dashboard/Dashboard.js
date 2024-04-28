@@ -15,7 +15,7 @@ import temperature from "../../logo.svg"
 import feels from "../../logo.svg"
 import humidity from "../../logo.svg"
 import pressure from "../../logo.svg"
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 
 function Dashboard({ setIsAuth, isAuth }) {
@@ -39,10 +39,10 @@ function Dashboard({ setIsAuth, isAuth }) {
     };
 
     useEffect(() => {
-        
+
         if (!isAuth) {
             navigate("/");
-          }
+        }
 
     }, [search])
 
@@ -51,6 +51,13 @@ function Dashboard({ setIsAuth, isAuth }) {
         setsearch(event.target.value)
 
     }
+    const url = 'https://appbacken-hvwoypdrr2hfhuhecrbuun.streamlit.app'
+    const redirectToWebsite = () => {
+        window.location.href = url; // Replace 'https://example.com' with your desired URL
+    };
+    const redirectToUpload = () => {
+        window.location.href = url + '/upload'; // Replace 'https://example.com' with your desired URL
+    };
 
 
 
@@ -60,11 +67,11 @@ function Dashboard({ setIsAuth, isAuth }) {
         <div className="main-dash">
             <div className="nav-dash">
                 <div className="in-nav-dash">
-                    <h1>Santa.</h1>
+                    <h1>CSE443.</h1>
                     <a><img src={dashboard} /><p>Dashboard</p></a>
                     <a><img src={transaction} /><p>Transition</p></a>
                     <a><img src={schedule} /><p>Schedule</p></a>
-                    
+
                 </div>
                 <div className="in-nav-dash">
                     <p>Help</p>
@@ -101,20 +108,24 @@ function Dashboard({ setIsAuth, isAuth }) {
                 <div className="graph-cont-dash">
                     <div className="head-graph-cont-dash">
                         <div>
-                            <button ><a href="/Recordvideo">Capture Image</a></button>
+                            <button onClick={redirectToWebsite}>
+                                Go to Website
+                            </button>
                         </div>
                         <div>
-                            <button>Upload ImageSSS</button>
+                        <button onClick={redirectToUpload}>
+                                Upload
+                            </button>
                         </div>
-                        
-                        
+
+
                     </div>
-                    
+
 
 
                 </div>
-                
-                
+
+
             </div>
 
         </div>

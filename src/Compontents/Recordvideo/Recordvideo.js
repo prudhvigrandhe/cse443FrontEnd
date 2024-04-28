@@ -5,7 +5,7 @@ const Recordvideo = () => {
     // Event listener for key presses
     document.addEventListener('keydown', event => {
 
-      fetch('https://cse443backend.onrender.com/save', {
+      fetch('http://127.0.0.1:5000/save', {
         method: 'POST'
       })
       .then(response => {
@@ -24,7 +24,7 @@ const Recordvideo = () => {
   return (
     <div>
       <h1>Live Video Stream</h1>
-      <img src="https://cse443backend.onrender.com/video" alt="Live video" />
+      <img src="http://127.0.0.1:5000/video" alt="Live video" />
     </div>
   );
 };
