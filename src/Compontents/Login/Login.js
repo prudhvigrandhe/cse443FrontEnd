@@ -26,7 +26,7 @@ function Login({ setIsAuth }) {
     return (
         <div className="main-login">
             <div className="banner-login">
-                <p>CSE-443.</p>
+                <p>Catch At Toll.</p>
 
             </div>
             <div className="container-login">

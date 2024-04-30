@@ -3,14 +3,16 @@
     flex-direction: row;
 }
 .banner-login{
+
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    justify-content:center;
+    align-items:flex-start;
     font-weight: 700;
     width: 35%;
     
-    background-color: rgb(0, 0, 0);
+    background-image: url('../../img/23104684-10bc-4357-8041-c462b36ccdf5.jpeg');
+    background-size: cover;
     height: 100vh;
 }
 .banner-login p{
