@@ -1,7 +1,7 @@
 import React from "react";
 import "./Login.css";
-import google from "../../logo.svg"
-import apple from "../../logo.svg"
+import google from "../../img/google.png"
+import apple from "../../img/apple-logo.png"
 import { auth, provider } from "../../firebase.js";
 import { signInWithPopup } from "firebase/auth";
 import { useNavigate } from "react-router-dom"

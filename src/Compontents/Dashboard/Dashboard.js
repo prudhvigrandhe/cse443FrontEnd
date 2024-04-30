@@ -1,20 +1,11 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./Dashboard.css";
-import Graph from "../../logo.svg";
-import notification from "../../logo.svg";
-import LineGraph from "../../logo.svg";
-import user from "../../logo.svg"
-import schedule from "../../logo.svg"
-import transaction from "../../logo.svg"
-import settings from "../../logo.svg"
-import dashboard from "../../logo.svg"
-import searchic from "../../logo.svg"
+import upload from "../../img/upload.png";
+import video from "../../img/youtube.png";
+
 import { signOut } from "firebase/auth";
 import { auth } from "../../firebase";
-import temperature from "../../logo.svg"
-import feels from "../../logo.svg"
-import humidity from "../../logo.svg"
-import pressure from "../../logo.svg"
+import Logo from "../../img/road-barrier.png"
 import { useNavigate } from "react-router-dom"
 
 
@@ -65,7 +56,7 @@ function Dashboard({ setIsAuth, isAuth }) {
     return (
 
         <div className="main-dash">
-            <div className="nav-dash">
+            {/* <div className="nav-dash">
                 <div className="in-nav-dash">
                     <h1>CSE443.</h1>
                     <a><img src={dashboard} /><p>Dashboard</p></a>
@@ -79,23 +70,19 @@ function Dashboard({ setIsAuth, isAuth }) {
                 </div>
 
 
-            </div >
+            </div > */}
 
             <div className="container-dash">
                 <div className="top-cont-dash">
                     <div className="logo-dash">
-                        <h1>Dashboard</h1>
+                        <img src={Logo}/>
+                        <h1>Catch At Toll</h1>
 
                     </div>
                     <div className="search-dash">
-                        <div className="search-bar">
-                            <input placeholder="Search..." />
-                            <button ><img src={searchic} /></button>
-
-                        </div>
-
-                        <img src={notification} />
-                        <button onClick={handleClick} className="useric"><img src={localStorage.photoURL} /></button>
+                        
+                        
+                        <button  onClick={handleClick} className="useric"><img src={localStorage.photoURL} /></button>
 
 
 
@@ -108,13 +95,16 @@ function Dashboard({ setIsAuth, isAuth }) {
                 <div className="graph-cont-dash">
                     <div className="head-graph-cont-dash">
                         <div>
-                            <button onClick={redirectToWebsite}>
-                                Go to Website
+                        <img src={video}/>
+                            <button className="button-45" onClick={redirectToWebsite}>
+                                Video Capture
                             </button>
                         </div>
                         <div>
-                        <button onClick={redirectToUpload}>
-                                Upload
+                        <img src={upload}/>
+                        <button className="button-45" onClick={redirectToUpload}>
+
+                        Upload Image
                             </button>
                         </div>
 
