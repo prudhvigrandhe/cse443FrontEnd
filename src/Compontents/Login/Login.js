@@ -26,7 +26,10 @@ function Login({ setIsAuth }) {
     return (
         <div className="main-login">
             <div className="banner-login">
-                <p>Catch At Toll.</p>
+            <div className="in-banner-login">
+
+                {/* <p>Catch At Toll.</p> */}
+                </div>
 
             </div>
             <div className="container-login">

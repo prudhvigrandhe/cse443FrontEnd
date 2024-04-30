@@ -20,6 +20,13 @@
     color: rgb(255, 255, 255);
     
 }
+.in-banner-login{
+  
+        background: rgba(176, 176, 176, 0.04);
+        backdrop-filter: saturate(180%) blur(5px);
+    height: 100%;
+    width: 100%;
+}
 .container-login{
     width: 65%;
     display: flex;
